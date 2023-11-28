@@ -15,7 +15,7 @@ const seedPrisma = async() => {
 	
 const readDataSet = async () => {
 	const raw: any = await readFile(
-		"./apps/prisma-postgres/src/prisma/dataparsed.json",
+		"./apps/dataset/dataparsed.json",
 		'utf-8'
 	)
 	return JSON.parse(raw)
