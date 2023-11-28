@@ -1,6 +1,6 @@
 import bodyParser from "body-parser";
 import express from "express";
-import { createPrismaConnection } from "./prisma/connection";
+import { createPrismaConnection } from "../dataset/connection";
 import restRoutes from "./routes";
 
 try {
