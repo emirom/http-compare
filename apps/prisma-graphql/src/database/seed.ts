@@ -1,9 +1,9 @@
 import { readFile } from "fs/promises";
 import path from "path";
-import { ICountryDTO } from "../dto/location.dto";
 import createCityService from '../services/city/createCity.service';
 import createCountryService from '../services/country/createCountry.service';
 import createProvinceService from "../services/province/createProvince.service";
+import { ICountryDTO } from "./location.dto";
 
 const seedPrisma = async() => {
 	console.log("started to seed prisma ...");
