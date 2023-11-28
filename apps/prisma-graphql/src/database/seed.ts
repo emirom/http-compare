@@ -1,5 +1,5 @@
 import { readFile } from "fs/promises";
-import path from "path";
+import { SeedCity, SeedCountry, SeedProvince } from '../../../../dataset/dataparsed.type';
 import createCityService from '../services/city/createCity.service';
 import createCountryService from '../services/country/createCountry.service';
 import createProvinceService from "../services/province/createProvince.service";
@@ -15,7 +15,7 @@ const seedPrisma = async() => {
 	
 const readDataSet = async () => {
 	const raw: any = await readFile(
-		path.join(__dirname, "../../dataset/dataparsed.json"),
+		"./dataset/dataparsed.json",
 		'utf-8'
 	)
 	return JSON.parse(raw)
