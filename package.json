@@ -34,8 +34,11 @@
     "apps/*"
   ],
   "dependencies": {
+    "@prisma/client": "^5.6.0",
     "axios": "^1.0.0",
+    "body-parser": "^1.20.2",
     "express": "^4.18.1",
+    "prisma": "^5.6.0",
     "tslib": "^2.3.0"
   }
 }
