@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { ICityDTO } from '../../dto/location.dto';
+import { ICityDTO } from '../../database/location.dto';
 import createCityService from '../../services/city/createCity.service';
 
 const createCity = async (req: Request, res: Response) => {

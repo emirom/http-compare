@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import seedPrisma from '../prisma/seed';
+import seedPrisma from '../database/seed';
 
 const seedController = async (_req: Request, res: Response) => {
 	try {
