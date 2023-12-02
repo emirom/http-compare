@@ -1,10 +1,10 @@
-# run me in root of src/prisma-express-graphql:
-# hurl --variables-file .env http/getFiftyCitiesOfCountry.hurl --test
+# run me in root of ./apps/prisma-graphql/src:
+# hurl --variables-file .env ./http/getOneCountry.hurl --test
 
 POST http://localhost:{{SERVER_PORT}}/graphql
 ```graphql
 {
-  getFiftyCitiesOfCountry( pageNumber:1, limit:50){
+  getCountry( limit:10, id:1 ){
     name
     provinces{
       name
@@ -14,8 +14,8 @@ POST http://localhost:{{SERVER_PORT}}/graphql
         abb,
         population,
       }
-	}
+    }
   }
 }
-  
+
 ```
