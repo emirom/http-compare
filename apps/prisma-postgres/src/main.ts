@@ -3,7 +3,6 @@ import cors from 'cors';
 import express from "express";
 import { createPrismaConnection } from "./database/connection";
 import restRoutes from "./routes";
-import cors from "cors"
 
 try {
   const app = express();
@@ -14,11 +13,9 @@ try {
     await createPrismaConnection();
   })
 
-  app.use(cors())
-
   restRoutes(app);
+  app.use(cors())
   app.use(express.json());
-  app.use(cors)
   app.use(bodyParser.urlencoded({
     extended: true
   }));
