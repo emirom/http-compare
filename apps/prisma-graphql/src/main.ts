@@ -26,7 +26,7 @@ try {
       })
     );
     app.use(express.json());
-    app.use(cors)
+    app.use(cors())
     
     app.listen(SERVER_PORT, () => {
       console.log(`Express server ( prisma + graphql ) is up at http://localhost:${SERVER_PORT}/graphql`);
